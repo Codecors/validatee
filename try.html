@@ -43,12 +43,12 @@
     <script src="mailgun_validator.js"></script>
     <script>
       // document ready
-
+var bulk = $('#email').val().split(',');
 
         // capture all enter and do nothing
         $('#email').keypress(function(e) {
           if(e.which == 13) {
-		  var bulk = $('#email').val().split(',');
+		  
                 for (var i = 0; i < bulk.length; i++) {
                   (function(index) {
                     $.ajax({
