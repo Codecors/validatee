@@ -39,7 +39,7 @@
     </p>
     <p>Remember to <a href="http://www.mailgun.com">sign up for Mailgun</a> to receive your public API key.</p>
 
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="mailgun_validator.js"></script>
     <script>
       // document ready
@@ -57,7 +57,7 @@
                         dataType: "jsonp",
                         crossDomain: true,
                         success: function(data, status_text) {
-                          $('#status').append(data.is_valid+' - 'data.address);console.log(status_text)
+                          $('#status').append(data.is_valid+' - '+data.address);console.log(status_text)
                         },
                         error: function(request, status_text, error) {
                             console.log(request);console.log(status_text);console.log(error);
