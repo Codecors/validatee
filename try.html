@@ -58,7 +58,7 @@
                         dataType: "jsonp",
                         crossDomain: true,
                         success: function(data, status_text) {
-                          $('#status').append(data.is_valid+' - '+data.address);console.log(status_text)
+                          $('#status').append(data.is_valid+' - '+data.address+'<br>');console.log(status_text)
                         },
                         error: function(request, status_text, error) {
                             console.log(request);console.log(status_text);console.log(error);
