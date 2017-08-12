@@ -28,7 +28,7 @@
 //
 
 (function( $ ) {
-    $.fn.mailgun_validator = function(options) {
+    $.fn.mailgun_validator = function(options) {console.log(options);
         return this.each(function() {
             var thisElement = $(this);
             thisElement.focusout(function(e) {
