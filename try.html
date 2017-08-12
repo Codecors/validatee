@@ -51,6 +51,8 @@
 		  var bulk = $('#email').val().split(',');
                 for (var i = 0; i < bulk.length; i++) {
                   (function(index) {
+                  setTimeout(function() {
+       			  
                     $.ajax({
                         type: "GET",
                         url: 'https://api.mailgun.net/v2/address/validate?callback=?',
@@ -64,6 +66,7 @@
                             console.log(request);console.log(status_text);console.log(error);
                         }
                     });
+                  }, i * 2000); 			  
                 })(i); 
               }
 		
